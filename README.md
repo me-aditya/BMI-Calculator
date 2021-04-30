@@ -2,15 +2,9 @@
 
 A new Flutter project.
 
-## Getting Started
+Design Credits to : Ruben Vaalt (https://dribbble.com/shots/4585382-Simple-BMI-Calculator/attachments/1036693?mode=media)
+Taught by : Dr. Angela Yu
 
-This project is a starting point for a Flutter application.
+![start](https://user-images.githubusercontent.com/59113146/116760921-e9f2f580-aa33-11eb-8aa1-41bbecbbb8c0.jpg)
+![result](https://user-images.githubusercontent.com/59113146/116760953-00994c80-aa34-11eb-99ce-bf86c03dddca.jpg)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
