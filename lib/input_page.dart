@@ -5,8 +5,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'constants.dart';
 import 'icon_content.dart';
 
-
-
 enum Gender {
   male,
   female,
@@ -49,6 +47,7 @@ class _InputPageState extends State<InputPage> {
           title: Center(child: Text("BMI Calculator")),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Expanded(
               child: Row(
@@ -80,7 +79,7 @@ class _InputPageState extends State<InputPage> {
                           ? kActiveCardColor
                           : kInactiveCardColor,
                       cardChild: IconContent(
-                        icon: FontAwesomeIcons.venus,
+                        icon: FontAwesomeIcons.mars,
                         gender: "FEMALE",
                       ),
                     ),
@@ -90,7 +89,29 @@ class _InputPageState extends State<InputPage> {
             ),
             Expanded(
                 child: ReuseableCard(
-                    color: kActiveCardColor, cardChild: Container())),
+              color: kActiveCardColor,
+              cardChild: Column(children: <Widget>[
+                Text(
+                  "HEIGHT",
+                  style: kLabelTextStyle,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: <Widget>[
+                    Text(
+                      "180",
+                      style: kNumberTextStyle,
+                    ),
+                    Text(
+                      "cm",
+                      style: kLabelTextStyle,
+                    ),
+                  ],
+                ),
+              ]),
+            )),
             Expanded(
               child: Row(
                 children: <Widget>[
