@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/results_page.dart';
 import 'package:bmi_calculator/reuseable_card.dart';
 import 'package:bmi_calculator/roundIconButton.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Center(child: Text('BMI CALCULATOR')),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -144,6 +145,9 @@ class _InputPageState extends State<InputPage> {
                               '$weight',
                               style: cNumberTextStyle,
                             ),
+                            SizedBox(
+                              width: 3.0,
+                            ),
                             Text(
                               'kg',
                               style: cLabelTextStyle,
@@ -223,9 +227,21 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          BottomButton(
-            onTap: () {},
-            buttonText: 'CALCULATE',
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/results');
+            },
+            child: Container(
+              child: Center(
+                child: Text(
+                  "CALCULATE YOUR BMI",
+                  style: cLargeButtonTextStyle,
+                ),
+              ),
+              color: cBottomContainerColor,
+              width: double.infinity,
+              height: 80.0,
+            ),
           ),
         ],
       ),
